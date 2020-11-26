@@ -1,0 +1,343 @@
+.grid-container /*sier at class=container skal deles inn 6 kolonner og 3 rader */
+{
+  display:grid;
+  grid-gap:0px;
+  border-radius:5px;
+  grid-template-columns: repeat (6, 1fr);
+  grid-template-rows: repeat (3, 1fr);
+  width: 100vw;
+  height: 100vh;
+  background-color:white;
+}
+/* Denne delen styler header og gjør hele headeren responsiv
+HEADER****************************************************
+HEADER***************************************************
+HEADER***************************************************
+HEADER***************************************************
+HEADER***************************************************
+*/
+.header /*styrer hvor stor del av container header skal være og styler headeren */
+{
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border:solid;
+  border-color:black;
+  text-align:center;
+  background-size: 250px;
+  background-repeat:no-repeat;
+  background-color:lightyellow;
+  height:300px;
+}
+
+
+.header h1
+{
+  font-size: 80px;
+  color:black;
+	font-family: sans-serif;
+}
+
+/* Denne delen styler meny og alt innhold. Inneholder også koder for responsivt design
+MENY*****************************************************
+MENY*****************************************************
+MENY*****************************************************
+MENY*****************************************************
+*/
+.meny /*forteller hvor stor del av container meny skal være og styler meny */
+{
+  grid-row:2;
+  grid-column-start: 1;
+  grid-column-end:2;
+  background-color:lightyellow;
+  border:solid;
+  border-color: black;
+}
+
+.meny p /*styler alt av (p) i menyen */
+{
+text-align:center;
+font-size: 30px;
+padding:2px;
+}
+
+.meny a /*styler alle linkene i menyen */
+{
+  display:block;
+  text-decoration: none;
+  color:black;
+  text-align:center;
+}
+.meny a:hover /* styler linken når man drar musepekeren over */
+{
+  display:block;
+  background-color: lightblue;
+}
+
+.meny h2{
+  text-align:center;
+  text-decoration:underline;
+  background-color:white;
+}
+/* Denne delen styler alt innhold til venstre for menyen
+VENSTRE************************************************
+VENSTRE**********************************************
+VENSTRE***********************************************
+VENSTRE**********************************************
+*/
+
+.left /*angir hvilken rad og kolonne og styler venstre del av innholdet midt på siden */
+{
+grid-row:2;
+grid-column-start: 2;
+grid-column-end: 6;
+width:1000px;
+text-align:center;
+margin-top:110px;
+margin-bottom:300px;
+margin-right:50px;
+margin-left:50px;
+border:solid;
+padding:20px;
+background-color:lightblue;
+border-radius: 5px;
+}
+.left h3
+{
+  font-size:45px;
+}
+.left form, input{
+font-size: 25px;
+}
+
+/* styler registrer-klasse.php */
+/* styler registrer-klasse.php */
+/* styler registrer-klasse.php */
+.inputs label{
+  margin-left:-120px;
+  position:absolute;
+}
+.inputs input{
+  margin-left:20px;
+  position:relative;
+}
+/* styler registrer-klasse.php */
+/* styler registrer-klasse.php */
+/* styler registrer-klasse.php */
+
+/* styler endre-klasse.php */
+/* styler endre-klasse.php */
+/* styler endre-klasse.php */
+
+.inputklasse select{
+  margin-left:-10px;
+  position:relative;
+  margin-top:4px;
+  width:340px;
+  height:25px;
+}
+
+.inputklasse input{
+  margin-left:-10px;
+  position:relative;
+  width: 335px;
+}
+
+.inputklasse label{
+  position:absolute;
+	margin-left:-200px;
+}
+
+/* styler endre-klasse.php */
+/* styler endre-klasse.php */
+/* styler endre-klasse.php */
+
+
+/* styler registrer-bilde.php */
+/* styler registrer-bilde.php */
+/* styler registrer-bilde.php */
+.inputbilde input {
+	margin-left:5px;
+  position:relative;
+
+}
+.inputbilde label{
+	position:absolute;
+	margin-left:-200px;
+}
+.inputbilde .fil{
+	position:absolute;
+	margin-left:-160px;
+}
+
+#filnavn
+{
+  width:300px;
+  height: 40px;
+  position:relative;
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 15px; /* enkel måte å style input for fil!!! */
+}
+/* styler registrer-bilde.php */
+/* styler registrer-bilde.php */
+/* styler registrer-bilde.php */
+
+/* styler endre-bilde.php */
+/* styler endre-bilde.php */
+/* styler endre-bilde.php */
+
+.nyttbilde input {
+	margin-left:5px;
+  position:relative;
+}
+.nyttbilde {
+	position:absolute;
+	margin-left:-200px;
+  margin-bottom: 2px;
+}
+
+.bildenummer{
+  height: 25px;
+  margin-left: -200px;
+}
+
+#bildeNr{
+  height: 25px;
+  width: 250px;
+  margin-left: 115px;
+  margin-bottom: 1px;
+  position:relative;
+}
+
+#filNavn{
+  height: 25px;
+  width: 250px;
+  margin-left: 115px;
+  margin-bottom: 1px;
+  position:relative;
+}
+
+.filNavn{
+  	margin-left:-200px;
+    margin-bottom: -500px;
+    position: relative;
+}
+.tabellbilde{
+  border:solid;
+  border-radius: 50px;
+  border-color: lightyellow;
+}
+
+/* styler endre-fag2.php */
+/* styler endre-fag2.php */
+/* styler endre-fag2.php */
+.inputfag2 input {
+	margin-left:-100px;
+  position:absolute;
+
+}
+.inputfag2 label{
+	position:absolute;
+	margin-left:-280px;
+}
+
+.inputfag2 select{
+  margin-left:-100px;
+  position:absolute;
+  margin-top:10px;
+  width:305px;
+  height:20px;
+}
+/* styler endre-fag2.php */
+/* styler endre-fag2.php */
+/* styler endre-fag2.php */
+
+
+.regoppgave input{ /* styler input i registrer oppgave og sentrerer dem */
+  margin-left:30px;
+  position:relative;
+}
+
+.regoppgave label{ /* styler labels og legger dem på linje i forhold til margin venstre, husk label (absolute) */
+  position:absolute;
+	margin-left:-130px;
+}
+.regoppgave select{ /* styler select boksen og gir posisjon relativ til tilhørende label */
+  margin-left:30px;
+  position:relative;
+  width:260px;
+  height:20px;
+}
+/* styler registrer-bruker6.php */
+/* styler registrer-bruker6.php */
+/* styler registrer-bruker6.php */
+
+.regbruker input{  /* styler input i registrer bruker og sentrerer dem*/
+  margin-left:100px;
+  font-size: 10px;
+  background-color: lightyellow;
+}
+.regbruker label{ /* styler labels og legger dem på linje i forhold til margin venstre, husk label (absolute)*/
+  position:absolute;
+	margin-left:10px;
+}
+
+.regbrukerform
+{
+  border:solid;
+  width: 300px;
+  text-align:center;
+  background-color:lightblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  box-shadow: 5px 10px 20px 5px #888888;
+}
+
+
+/* styler registrer-bruker6.php */
+/* styler registrer-bruker6.php */
+/* styler registrer-bruker6.php */
+
+/* styler innlogging.php */
+/* styler innlogging.php */
+/* styler innlogging.php */
+
+.innlogging
+  {
+    border:solid;
+    border-radius: 5px;
+    width: 300px;
+    text-align:center;
+    background-color:lightblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    box-shadow: 5px 10px 20px 5px #888888;
+  }
+  /* styler innlogging.php */
+  /* styler innlogging.php */
+  /* styler innlogging.php */
+
+
+/* Denne delen styler footer
+Footer************************************************
+Footer**********************************************
+Footer***********************************************
+Footer**********************************************
+*/
+.footer /*angir hvilken rad og kolonne footer ligger på og styler footer */
+{
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border:solid;
+  border-color:black;
+  background-color:lightyellow;
+  height:130px;
+}
+.footer h3 {
+margin-left:50px;
+margin-top:100px;
+}

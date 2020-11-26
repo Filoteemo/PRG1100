@@ -1,0 +1,52 @@
+CREATE TABLE klasse(
+klassekode CHAR(3) NOT NULL,
+klassenavn VARCHAR(50) NOT NULL,
+studiumkode CHAR(4) NOT NULL,
+PRIMARY KEY (klassekode)
+);
+
+/* lager tabell for klasse */
+/* lager tabell for klasse */
+/* lager tabell for klasse */
+
+CREATE TABLE bilde(
+bildenr INT NOT NULL,
+opplastningsdato DATE,
+filnavn VARCHAR(15) NOT NULL,
+beskrivelse VARCHAR(30) NOT NULL,
+PRIMARY KEY (bildenr,filnavn)); /* forsøker å gjøre disse to assosiative */
+
+/* lager tabell for bilde */
+/* lager tabell for bilde */
+/* lager tabell for bilde */
+
+CREATE TABLE student(
+brukernavn VARCHAR(7) NOT NULL,
+fornavn VARCHAR(15) NOT NULL,
+etternavn VARCHAR(15) NOT NULL,
+klassekode CHAR(3) NOT NULL,
+bildenr INT NOT NULL,
+filnavn VARCHAR(15),
+PRIMARY KEY (brukernavn),
+FOREIGN KEY (klassekode) REFERENCES klasse (klassekode),
+FOREIGN KEY (bildenr,filnavn) REFERENCES bilde (bildenr,filnavn));
+
+/* lager tabell for student */
+/* lager tabell for student */
+/* lager tabell for student */
+
+
+DROP TABLE student;
+DROP TABLE bilde;
+DROP TABLE klasse;
+
+/*sletter tabeller i korrekt rekkefølge */
+
+/* koden nedenfor henter ut data fra to tabeller som har like kolonner (i dette tilfellet bildenr).
+I tillegg skriver den KUN ut den klassekoden som er valgt i dynamisk listeboks (AND klassekode='$klassekode')
+På denne måten kan man inkludere to tabeller og vise data fra begge. */
+
+/* $sqlSetning="SELECT student.klassekode, bilde.bildenr, bilde.filnavn, student.fornavn, student.etternavn
+FROM student
+INNER JOIN bilde ON student.bildenr=bilde.bildenr AND klassekode='$klassekode'
+ORDER BY student.klassekode;"; */
